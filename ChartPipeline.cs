@@ -12,7 +12,6 @@ public static class ChartPipeline
 
     static ChartPipeline()
     {
-        Register(JsonAdapter.ChartTypeName, new JsonAdapter());
         Register(DefaultAdapter.ChartTypeName, new DefaultAdapter());
     }
     

@@ -8,7 +8,7 @@ namespace LivinOnSweets.ChartFormat.Adapters;
 /// <summary>
 /// The default adapter for the Livin' Chart Format spec.
 /// </summary>
-public class DefaultAdapter : IChartAdatper<Stream>
+public class DefaultAdapter : IChartAdatper<string>
 {
     /// <summary>
     /// The current version of the Livin' Chart Format Spec
@@ -21,13 +21,10 @@ public class DefaultAdapter : IChartAdatper<Stream>
     public static readonly string ChartTypeName = $"los_prop_{ChartVersion}";
     
     /// <inheritdoc cref="IChartAdatper{TExternal}.Adapt"/>
-    /// <remarks>If the <paramref name="source"/> is not a TOML stream with the type of <see cref="ChartData"/> it will return <c>null</c></remarks>
-    public ChartData Adapt(Stream source)
+    /// <remarks>If the <paramref name="source"/> is not a TOML string with the type of <see cref="ChartData"/> it will return <c>null</c></remarks>
+    public ChartData Adapt(string source)
     {
-        using StreamReader reader = new(source);
-        var content = reader.ReadToEnd();
-
-        if (!Toml.TryToModel(content, out ChartData? chartData, out var diagnostics))
+        if (!Toml.TryToModel(source, out ChartData? chartData, out var diagnostics))
         {
             // TODO bruh
             return null!;

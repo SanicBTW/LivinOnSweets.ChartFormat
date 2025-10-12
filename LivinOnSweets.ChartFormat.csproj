@@ -10,7 +10,6 @@
       <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
       <DocumentationFile>bin\Release\LivinOnSweets.ChartFormat.xml</DocumentationFile>
       <DebugSymbols>true</DebugSymbols>
-      <DebugType>embedded</DebugType>
     </PropertyGroup>
 
     <ItemGroup>
