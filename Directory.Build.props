@@ -1,0 +1,29 @@
+﻿<Project>
+    <PropertyGroup Label="Package Information">
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        
+        <PackageProjectUrl>https://github.com/SanicBTW/LivinOnSweets.ChartFormat</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/SanicBTW/LivinOnSweets.ChartFormat</RepositoryUrl>
+
+        <Title>Livin on Sweets Chart Format</Title>
+        <Authors>SanicBTW</Authors>
+        <Description>The Livin' on Sweets chart format library, includes the JSON objects for the original chart format and TOML tables definitions for the propietary format.</Description>
+        <Copyright>SanicBTW © 2025</Copyright>
+
+        <PackageReleaseNotes>The implementation of the Livin' Chart Format Spec v1</PackageReleaseNotes>
+
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <FileVersion>1.0.0.0</FileVersion>
+        
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+</Project>

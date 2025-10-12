@@ -1,0 +1,34 @@
+﻿{
+  // This file serves as the reference for the original chart format, found on the JS file embedded into the resources, can be extracted with the CLI tool
+  "data": {
+    "level": "normal", // The difficulty of the song
+    "bpm": 120,
+    "gridsPerBeat": 4, // the amount of steps/grids in a beat
+    "beatHighlights": [ // apparently this is for the grid lines
+      {
+        "startBeat": 0,
+        "endBeat": 324,
+        "beatHighlight": 4
+      }
+    ],
+    "noteOffset": 120,
+    "notes": [
+      {
+        "type": "basic",
+        "lane": 0,
+        "beat": 2,
+        "grid": 4,
+        "fever": false
+      },
+      {
+        "type": "long",
+        "lane": 0,
+        "beat": 2,
+        "grid": 4,
+        "fever": false,
+        "endBeat": 4,
+        "endGrid": 0
+      }
+    ]
+  }
+}
