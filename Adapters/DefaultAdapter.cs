@@ -27,6 +27,8 @@ public class DefaultAdapter : IChartAdatper<string>
         if (!Toml.TryToModel(source, out ChartData? chartData, out var diagnostics))
         {
             // TODO bruh
+            // so instead of silently crashing, output the diagnostics to the console since ive been wondering wtf was going on for the past hour
+            Console.WriteLine(diagnostics.ToString());
             return null!;
         }
 
