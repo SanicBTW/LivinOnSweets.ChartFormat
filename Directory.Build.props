@@ -1,6 +1,5 @@
 ﻿<Project>
     <PropertyGroup Label="Package Information">
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         
         <PackageProjectUrl>https://github.com/SanicBTW/LivinOnSweets.ChartFormat</PackageProjectUrl>
@@ -12,6 +11,8 @@
         <Copyright>SanicBTW © 2025</Copyright>
 
         <PackageReleaseNotes>The implementation of the Livin' Chart Format Spec v1</PackageReleaseNotes>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
 
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <FileVersion>1.0.0.0</FileVersion>
@@ -26,4 +27,9 @@
     <PropertyGroup>
         <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\"/>
+        <None Include="LICENSE" Pack="true" PackagePath="\"/>
+    </ItemGroup>
 </Project>
