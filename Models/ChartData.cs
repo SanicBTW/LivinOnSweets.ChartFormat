@@ -9,15 +9,15 @@ public class ChartData
     /// <summary>
     /// The <see cref="ChartMetadata"/> of this <see cref="ChartData"/>.
     /// </summary>
-    public ChartMetadata Metadata;
+    public ChartMetadata Metadata { get; set; } = new();
     
     /// <summary>
     /// An array of the <see cref="BeatHighlight"/>'s available on this <see cref="ChartData"/>.
     /// </summary>
-    public BeatHighlight[]? BeatHighlights;
+    public List<BeatHighlight> BeatHighlights { get; set; } = [];
 
     /// <summary>
     /// An array of the <see cref="NoteData"/>'s available on this <see cref="ChartData"/>.
     /// </summary>
-    public NoteData[]? Notes;
+    public List<NoteData> Notes { get; set; } = [];
 }

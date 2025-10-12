@@ -1,22 +1,23 @@
-﻿namespace LivinOnSweets.ChartFormat.Models;
+﻿// ReSharper disable ClassNeverInstantiated.Global
+namespace LivinOnSweets.ChartFormat.Models;
 
 /// <summary>
 /// Represents the data structure of a Beat Highlight.
 /// </summary>
-public readonly struct BeatHighlight(int startBeat, int endBeat, int interval)
+public class BeatHighlight
 {
     /// <summary>
     /// The starting beat of this highlight.
     /// </summary>
-    public readonly int StartBeat = startBeat;
+    public int StartBeat { get; set; }
     
     /// <summary>
     /// The ending beat of this highlight.
     /// </summary>
-    public readonly int EndBeat = endBeat;
+    public int EndBeat { get; set; }
 
     /// <summary>
     /// The <see cref="ChartMetadata.GridsPerBeat"/> of this highlight.
     /// </summary>
-    public readonly int Interval = interval;
+    public int Interval { get; set; }
 }
