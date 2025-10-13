@@ -19,7 +19,7 @@ public static class ChartPipeline
     /// </summary>
     /// <param name="formatId">The chart format to register this <paramref name="adapter"/> into, overriding can happen.</param>
     /// <param name="adapter">The adapter for the chart <paramref name="formatId"/>.</param>
-    public static void Register(string formatId, IChartAdapter adapter) => Adapters[formatId] = adapter;
+    public static void Register(string formatId, IChartAdapter adapter) => Adapters[formatId.ToLowerInvariant()] = adapter;
 
     /// <summary>
     /// Attempts to retrieve <paramref name="formatId"/> <see cref="IChartAdapter"/>.
@@ -28,7 +28,7 @@ public static class ChartPipeline
     /// <param name="adapter">The format chart adapter.</param>
     /// <returns>True if <paramref name="formatId"/> has a <see cref="IChartAdapter"/>.</returns>
     public static bool TryGetAdapter(string formatId, out IChartAdapter? adapter)
-        => Adapters.TryGetValue(formatId, out adapter);
+        => Adapters.TryGetValue(formatId.ToLowerInvariant(), out adapter);
 
     /// <summary>
     /// Attempts to retrieve <paramref name="formatId"/> <see cref="IChartAdapter"/>.
