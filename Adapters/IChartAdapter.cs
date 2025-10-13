@@ -46,7 +46,7 @@ public interface IChartAdapter<TExternal> : IChartAdapter
     object? IChartAdapter.Prepare(object source) => Prepare(source);
     
     /// <inheritdoc />
-    /// <exception cref="InvalidCastException">Throws when <paramref name="source"/> can't be casted into <see cref="TExternal"/></exception>
+    /// <exception cref="InvalidCastException">Throws when <paramref name="source"/> can't be casted into <typeparamref name="TExternal"/></exception>
     ChartData? IChartAdapter.Adapt(object source)
     {
         if (source is not TExternal casted)

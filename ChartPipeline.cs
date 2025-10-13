@@ -26,7 +26,7 @@ public static class ChartPipeline
     /// </summary>
     /// <param name="formatId">The chart format to look up.</param>
     /// <param name="adapter">The format chart adapter.</param>
-    /// <returns>True if <see cref="formatId"/> has a <see cref="IChartAdapter"/>.</returns>
+    /// <returns>True if <paramref name="formatId"/> has a <see cref="IChartAdapter"/>.</returns>
     public static bool TryGetAdapter(string formatId, out IChartAdapter? adapter)
         => Adapters.TryGetValue(formatId, out adapter);
 
@@ -35,7 +35,7 @@ public static class ChartPipeline
     /// </summary>
     /// <param name="formatId">The chart format to look up.</param>
     /// <param name="adapter">The format chart adapter.</param>
-    /// <returns>True if <see cref="formatId"/> has a <see cref="IChartAdapter"/>.</returns>
+    /// <returns>True if <paramref name="formatId"/> has a <see cref="IChartAdapter"/>.</returns>
     public static bool TryGetAdapter<TExternal>(string formatId, out IChartAdapter<TExternal>? adapter)
     {
         if (!TryGetAdapter(formatId, out var retrieved))
