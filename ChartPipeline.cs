@@ -31,7 +31,7 @@ public static class ChartPipeline
     /// <typeparam name="TExternal">The type of chart that will get adapted into <see cref="ChartData"/>.</typeparam>
     /// <returns>A freshly converted <see cref="ChartData"/> from <typeparamref name="TExternal"/>.</returns>
     /// <exception cref="Exception">When no <see cref="IChartAdatper{TExternal}"/> was registered for the chart <paramref name="version"/>.</exception>
-    public static ChartData Load<TExternal>(string version, TExternal source)
+    public static ChartData? Load<TExternal>(string version, TExternal source)
     {
         if (Importers.TryGetValue(version, out var obj) && obj is IChartAdatper<TExternal> chartData)
             return chartData.Adapt(source);
