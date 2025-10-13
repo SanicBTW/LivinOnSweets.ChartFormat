@@ -8,7 +8,7 @@ namespace LivinOnSweets.ChartFormat.Adapters;
 /// <summary>
 /// The default adapter for the Livin' Chart Format spec.
 /// </summary>
-public class DefaultAdapter : IChartAdatper<string>
+public class DefaultAdapter : IChartAdapter<string>
 {
     /// <summary>
     /// The current version of the Livin' Chart Format Spec
@@ -16,11 +16,11 @@ public class DefaultAdapter : IChartAdatper<string>
     public static readonly Version ChartVersion = new(1, 1, 0);
     
     /// <summary>
-    /// The name (or chart version) this adapter will be registered as inside the <see cref="ChartPipeline"/>.
+    /// The chart format this adapter will be registered as inside the <see cref="ChartPipeline"/>.
     /// </summary>
-    public static readonly string ChartTypeName = $"los_prop_{ChartVersion}";
+    public static readonly string ChartFormatName = $"los_prop_{ChartVersion}";
     
-    /// <inheritdoc cref="IChartAdatper{TExternal}.Adapt"/>
+    /// <inheritdoc />
     /// <remarks>If the <paramref name="source"/> is not a TOML string with the type of <see cref="ChartData"/> it will return <c>null</c></remarks>
     public ChartData Adapt(string source)
     {
@@ -33,5 +33,16 @@ public class DefaultAdapter : IChartAdatper<string>
         }
 
         return chartData;
+    }
+
+    /// <inheritdoc />
+    public string Prepare<TSource>(TSource source)
+    {
+        return source switch
+        {
+            string str => str,
+            Stream stream => new StreamReader(stream).ReadToEnd(),
+            _ => throw new InvalidOperationException($"Cannot prepare source of type {source?.GetType()}")
+        };
     }
 }
