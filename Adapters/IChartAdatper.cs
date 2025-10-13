@@ -13,5 +13,5 @@ public interface IChartAdatper<in TExternal>
     /// </summary>
     /// <param name="source">The source chart of type <typeparamref name="TExternal"/>.</param>
     /// <returns>An adapted <see cref="ChartData"/>.</returns>
-    ChartData Adapt(TExternal source);
+    ChartData? Adapt(TExternal source);
 }
