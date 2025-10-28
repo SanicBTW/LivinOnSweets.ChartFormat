@@ -20,6 +20,12 @@ public static class ChartPipeline
     /// <param name="formatId">The chart format to register this <paramref name="adapter"/> into, overriding can happen.</param>
     /// <param name="adapter">The adapter for the chart <paramref name="formatId"/>.</param>
     public static void Register(string formatId, IChartAdapter adapter) => Adapters[formatId.ToLowerInvariant()] = adapter;
+    
+    /// <summary>
+    /// Removes a registered <see cref="IChartAdapter"/> from the pipeling.
+    /// </summary>
+    /// <param name="formatId">The chart format to unregister.</param>
+    public static void Unregister(string formatId) => Adapters.Remove(formatId.ToLowerInvariant());
 
     /// <summary>
     /// Attempts to retrieve <paramref name="formatId"/> <see cref="IChartAdapter"/>.
