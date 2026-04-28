@@ -13,13 +13,13 @@ public class DefaultAdapter : IChartAdapter<string>
     /// <summary>
     /// The current version of the Livin' Chart Format Spec
     /// </summary>
-    public static readonly Version ChartVersion = new(1, 1, 0);
-    
+    public static readonly Version ChartVersion = new(1, 2, 0);
+
     /// <summary>
     /// The chart format this adapter will be registered as inside the <see cref="ChartPipeline"/>.
     /// </summary>
     public static readonly string ChartFormatName = $"los_prop_{ChartVersion}";
-    
+
     /// <inheritdoc />
     /// <remarks>If the <paramref name="source"/> is not a TOML string with the type of <see cref="ChartData"/> it will return <c>null</c></remarks>
     public ChartData Adapt(string source)
