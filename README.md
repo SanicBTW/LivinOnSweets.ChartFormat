@@ -5,6 +5,6 @@ the data structures for converting said format into the native chart format.
 
 Please check the "Specification" folder to see the chart format.
 
-*Last updated: `23/08/2025`*
+*Last updated: `28/04/2026`*
 
-- Chart version: 1.1.0
+- Chart version: 1.2.0
