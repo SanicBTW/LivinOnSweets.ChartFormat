@@ -4,7 +4,7 @@ namespace LivinOnSweets.ChartFormat.Models;
 /// <summary>
 /// Represents the data structure of a Note Position, groups the Beat and Grid properties from the original format.
 /// </summary>
-public class NotePosition
+public class TimePosition
 {
     /// <summary>
     /// The beat where the <see cref="NoteData"/>. is gonna spawn.

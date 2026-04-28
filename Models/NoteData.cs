@@ -19,7 +19,7 @@ public class NoteData
     /// <summary>
     /// The starting position of this <see cref="NoteData"/>.
     /// </summary>
-    public NotePosition Start { get; set; } = new();
+    public TimePosition Start { get; set; } = new();
     
     /// <summary>
     /// The <see cref="ChartMetadata.GridsPerBeat"/> of this <see cref="NoteData"/>.
@@ -40,7 +40,7 @@ public class NoteData
 
     /// <summary>
     /// The ending position of this <see cref="NoteData"/>, only used when <see cref="Type"/> is "long".
-    /// <remarks>Only used to calculate the length of the <see cref="NoteData"/>, if time is present it will be used instead of calculating it with the <see cref="NotePosition.Beat"/> and <see cref="NotePosition.Grid"/>.</remarks>
+    /// <remarks>Only used to calculate the length of the <see cref="NoteData"/>, if time is present it will be used instead of calculating it with the <see cref="TimePosition.Beat"/> and <see cref="TimePosition.Grid"/>.</remarks>
     /// </summary>
-    public NotePosition? End { get; set; }
+    public TimePosition? End { get; set; }
 }
