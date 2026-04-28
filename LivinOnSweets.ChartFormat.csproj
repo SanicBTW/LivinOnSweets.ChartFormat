@@ -4,6 +4,10 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Version>1.2.0</Version>
+        <Description>The Livin' on Sweets chart format library, includes the JSON objects for the original chart format and TOML tables definitions for the proprietary format.</Description>
+        <Copyright>SanicBTW © 2026</Copyright>
+        <PackageReleaseNotes>The implementation of the Livin' Chart Format Spec v1.2</PackageReleaseNotes>
     </PropertyGroup>
     
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
